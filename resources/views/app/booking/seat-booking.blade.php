@@ -17,19 +17,19 @@
                 <div class="card-header">
                     <h4>Denah Kursi</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body9">
                     <div class="d-flex justify-content-center mb-3">
                         <div class="col-6 text-center">
                             <a href="#" class="badge badge-primary">Film Screen</a>
                         </div>
                     </div>
-                    <div class="row d-flex justify-content-center">
+                    <div class="row p-5 d-flex justify-content-center">
                         @foreach ($film->filmSeat as $item)
                             <div class="col-lg-1 px-1 py-1">
                                 <a href="#" onclick="event.preventDefault()"
                                     @if ($item->is_ordered) class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Sudah Dipesan"
                                     @else
-                                        class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Masih Kosong" @endif">
+                                        class="btn btn-primary3" data-toggle="tooltip" data-placement="top" title="Masih Kosong" @endif">
                                     {{ $item->seat->seat_number }}
                                 </a>
                             </div>
@@ -57,9 +57,6 @@
                                     <option value="{{ $item->seat->id }}">{{ $item->seat->seat_number }}</option>
                                 @endforeach
                             </select>
-                            <p class="mt-1">*Tahan tombol <strong>CTRL(Windows)</strong> atau
-                                <strong>Command(Mac)</strong> untuk memilih lebih dari satu.
-                            </p>
                         </div>
                 </div>
             </div>
@@ -90,7 +87,7 @@
                             </a>
                         </div>
                         <div class="col-6">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <button type="submit" class="btn btn-primary3 btn-lg btn-block">
                                 Konfirmasi
                             </button>
                         </div>

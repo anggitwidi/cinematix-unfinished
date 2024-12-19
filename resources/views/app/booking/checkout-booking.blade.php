@@ -20,7 +20,7 @@
                         <div class="col-lg-12">
                             <div class="invoice-title">
                                 <h2>Detail Pemesanan</h2>
-                                <div class="invoice-number">SeaFlashTix</div>
+                                <div class="invoice-number">Cinematix</div>
                             </div>
                             <div class="row mt-3">
                                 <div class="col-10">
@@ -93,7 +93,7 @@
                         @foreach ($confirmDataSeat as $item)
                             <input type="hidden" value="{{ $item }}" name="confirm_data_seat[]">
                         @endforeach
-                        <button class="btn btn-primary btn-icon icon-left"><i class="fas fa-credit-card"></i> Process Payment</button>
+                        <button class="btn btn-primary4 btn-icon icon-left"><i class="fas fa-credit-card"></i> Process Payment</button>
                         <button class="btn btn-danger" data-confirm="Anda Yakin?|Batalkan pemesanan tiket?" data-confirm-yes="window.location.href = '{{ route('films.index')}}'"><i class="fas fa-times"></i> Cancel</button>
                         </form>
                     </div>

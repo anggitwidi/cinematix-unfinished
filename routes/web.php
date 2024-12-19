@@ -37,4 +37,3 @@ Route::middleware('auth')->group(function () {
 
     Route::post('user/top-up', [UserController::class, 'topupBalance'])->name('user.topup');
 });
-

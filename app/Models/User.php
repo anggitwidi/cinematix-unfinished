@@ -13,6 +13,8 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
     protected $table = 'users';
+
+    protected $fillable = ['name','email','password','username','birthdate', 'balance'];
     /**
      * The attributes that are mass assignable.
      *
@@ -41,5 +43,9 @@ class User extends Authenticatable
 
     public function transaction(){
         return $this->hasMany(Transaction::class);
+    }
+    public function getIsAdminAttribute(): bool
+    {
+        return $this->role === 'admin';
     }
 }

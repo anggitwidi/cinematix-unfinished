@@ -55,7 +55,7 @@
                                         </tr>
                                     </table>
                                     <a href="{{ route('user.detail-transaction', $item->id) }}"
-                                        class="btn btn-sm btn-primary mt-4">
+                                        class="btn btn-sm btn-primary3 mt-4">
                                         <i class="fas fa-info-circle"></i>
                                         Lihat Detail
                                     </a>

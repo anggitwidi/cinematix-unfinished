@@ -73,11 +73,12 @@
             <div class="main-sidebar sidebar-style-2">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="index.html">SeaFlashTix</a>
+                        <a href="index.html">
+                            <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" style="height: 40px; max-width: 100%;">
+                        </a>
                     </div>
-                    <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="index.html">SC</a>
-                    </div>
+                    
+                
                     <ul class="sidebar-menu">
                         @yield('sidebar-user-booking')
                     </ul>
@@ -102,7 +103,7 @@
             {{-- FOOTER --}}
             <footer class="main-footer">
                 <div class="text-center">
-                    Developed by Ilham Yudantyo &copy; 2023
+                    Developed by CACTUS &copy; 2024
                 </div>
             </footer>
             {{-- END FOOTER --}}

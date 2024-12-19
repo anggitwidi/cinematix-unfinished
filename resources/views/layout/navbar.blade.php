@@ -1,7 +1,9 @@
 <div class="navbar-bg"></div>
 {{-- NAVBAR PERTAMA --}}
 <nav class="navbar navbar-expand-lg main-navbar">
-    <a href="index.html" class="navbar-brand sidebar-gone-hide text-center">SeaFlashTix</a>
+    <a href="index.html" class="navbar-brand sidebar-gone-hide text-center">
+        <img src="{{ asset('assets/img/logowhite.png') }}" alt="Logo" style="height: 30px; max-width: 100%;">
+    </a>    
     <div class="navbar-nav">
         <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
     </div>

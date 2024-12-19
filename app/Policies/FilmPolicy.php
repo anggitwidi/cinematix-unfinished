@@ -4,7 +4,6 @@ namespace App\Policies;
 
 use App\Models\Film;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
 
 class FilmPolicy
 {
@@ -13,7 +12,8 @@ class FilmPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        // Semua pengguna bisa melihat daftar film
+        return true;
     }
 
     /**
@@ -21,7 +21,8 @@ class FilmPolicy
      */
     public function view(User $user, Film $film): bool
     {
-        //
+        // Pengguna bisa melihat film yang berstatus published atau jika user adalah admin
+        return $film->status === 'published' || $user->is_admin;
     }
 
     /**
@@ -29,7 +30,8 @@ class FilmPolicy
      */
     public function create(User $user): bool
     {
-        //
+        // Hanya admin yang bisa membuat film
+        return $user->is_admin;
     }
 
     /**
@@ -37,7 +39,8 @@ class FilmPolicy
      */
     public function update(User $user, Film $film): bool
     {
-        //
+        // Hanya admin atau pemilik film yang bisa mengupdate film
+        return $user->is_admin || $user->id === $film->user_id;
     }
 
     /**
@@ -45,7 +48,8 @@ class FilmPolicy
      */
     public function delete(User $user, Film $film): bool
     {
-        //
+        // Hanya admin yang bisa menghapus film
+        return $user->is_admin;
     }
 
     /**
@@ -53,7 +57,8 @@ class FilmPolicy
      */
     public function restore(User $user, Film $film): bool
     {
-        //
+        // Hanya admin yang bisa me-restore film
+        return $user->is_admin;
     }
 
     /**
@@ -61,6 +66,7 @@ class FilmPolicy
      */
     public function forceDelete(User $user, Film $film): bool
     {
-        //
+        // Hanya admin yang bisa menghapus film secara permanen
+        return $user->is_admin;
     }
 }

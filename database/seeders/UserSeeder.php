@@ -14,10 +14,10 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'username'=>'ilham_',
-            'name'=> 'Ilham Yudantyo',
-            'password'=>bcrypt('ilham123'),
-            'birthdate'=>'2001-09-18',
+            'username'=>'admin',
+            'name'=> 'anggit',
+            'password'=>bcrypt('admin123'),
+            'birthdate'=>'1995-04-13',
             'balance'=>500000,
         ]);
     }

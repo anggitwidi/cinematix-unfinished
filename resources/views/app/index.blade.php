@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title-pub', 'SeaFlashTix | All Films')
+@section('title-pub', 'Cinematix | All Films')
 
 @section('content')
     <section class="section" id="our-films">
@@ -8,7 +8,6 @@
             <h1>Tayang Saat Ini</h1>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="#">Semua Film</a></div>
-                <div class="breadcrumb-item"><a href="#">Tayang Saat Ini</a></div>
             </div>
         </div>
 
